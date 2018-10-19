@@ -25,6 +25,10 @@ export class UserComponent implements OnInit {
     }
     this.hobbies = ["Write code", "Play games"]
   }
+  OnClick(){
+    this.name = "my name"
+    this.hobbies.push("a new hobbie")
+  }
 
 }
 
