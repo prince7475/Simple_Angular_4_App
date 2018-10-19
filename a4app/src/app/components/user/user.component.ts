@@ -31,6 +31,14 @@ export class UserComponent implements OnInit {
     return false
   }
 
+  
+  deleteHoppy(index){
+    let newList = this.hobbies.filter( (el,i) => {
+     return !(i === index)
+    })
+    this.hobbies = newList
+  }
+
 }
 
 interface Address {
