@@ -5,8 +5,15 @@
 <h1>{{address.state}}</h1>
 
 <h1>Hobbies</h1>
+<form (submit)="addHobby(hobby.value)">
+  <div>
+    <label for="hobby">Hobby: </label>
+    <input type="text" #hobby/>
+  </div>
+  <button type="submit"> Submit</button>
+</form>
 <ul>
-  <li *ngFor="let hobby of hobbies; let i = index">{{i}}: {{hobby}}
+  <li *ngFor="let hobby of hobbies; let i = index">{{i + 1}}: {{hobby}}
   </li>
 </ul>
 
