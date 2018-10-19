@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {DataService} from '../../services/data.service'
+import { BootstrapOptions } from '@angular/core/src/application_ref';
 
 @Component({
   selector: 'app-user',
@@ -13,6 +14,7 @@ export class UserComponent implements OnInit {
   address: Address
   hobbies: String[];
   posts: Post;
+  editUser:Boolean;
   constructor(private dataservice: DataService) { 
     console.log("constructor ran")
   }
@@ -44,6 +46,10 @@ export class UserComponent implements OnInit {
      return !(i === index)
     })
     this.hobbies = newList
+  }
+
+  toggleEdit(){
+    this.editUser = !this.editUser
   }
 
 }

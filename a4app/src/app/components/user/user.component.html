@@ -18,41 +18,46 @@
   </li>
 </ul>
 
-<h1>Edit User</h1>
-<form>
-    <h2>Address</h2>
-  <div>
-    <div>
-      <label for="name"> Name: </label><br />
-      <input type="text" [(ngModel)] ="name" name="name"/>
-    </div>
-    
-    <div>
-      <label for="age">Age: </label><br />
-      <input type="number" [(ngModel)] ="age" name="age"/>
-    </div>
-    <div>
-    <label for="email">Email: </label><br />
-      <input type="email" [(ngModel)] ="email" name="email"/>
-    </div>
-    
-    <div>      
-      <label for="street">Street: </label><br />
-      <input type="text" [(ngModel)]="address.street" name="street"/>
-      </div>
-    
-    <div>      
-      <label for="city">City: </label><br />
-      <input type="text" [(ngModel)]="address.city" name="city">
-    </div>
+<button (click)="toggleEdit()">Edit User</button>
 
-    <div>      
-        <label for="state">State: </label><br />
-        <input type="text" [(ngModel)]="address.state" name="state">
-    </div>
+<div *ngIf="editUser">
+  <h1>Edit User</h1>
+  <form>
+      <h2>Address</h2>
+    <div>
+      <div>
+        <label for="name"> Name: </label><br />
+        <input type="text" [(ngModel)] ="name" name="name"/>
+      </div>
       
-  </div>
-</form>
+      <div>
+        <label for="age">Age: </label><br />
+        <input type="number" [(ngModel)] ="age" name="age"/>
+      </div>
+      <div>
+      <label for="email">Email: </label><br />
+        <input type="email" [(ngModel)] ="email" name="email"/>
+      </div>
+      
+      <div>      
+        <label for="street">Street: </label><br />
+        <input type="text" [(ngModel)]="address.street" name="street"/>
+        </div>
+      
+      <div>      
+        <label for="city">City: </label><br />
+        <input type="text" [(ngModel)]="address.city" name="city">
+      </div>
+
+      <div>      
+          <label for="state">State: </label><br />
+          <input type="text" [(ngModel)]="address.state" name="state">
+      </div>
+        
+    </div>
+  </form>
+</div>
+
 
 <div>
   <h1>Posts</h1>
