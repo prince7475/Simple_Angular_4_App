@@ -1,8 +1,8 @@
-<h1>{{name}}</h1>
-<h1>{{age}}</h1>
-<h1>{{address.street}}</h1>
-<h1>{{address.city}}</h1>
-<h1>{{address.state}}</h1>
+<h1>Name: {{name}}</h1>
+<h1>Age: {{age}}</h1>
+<h1>Street: {{address.street}}</h1>
+<h1>City: {{address.city}}</h1>
+<h1>State: {{address.state}}</h1>
 
 <h1>Hobbies</h1>
 <form (submit)="addHobby(hobby.value)">
@@ -17,3 +17,41 @@
     <button (click)="deleteHoppy(i)">remove</button>
   </li>
 </ul>
+
+<h1>Edit User</h1>
+<form>
+  <div>
+    <div>
+      <label for="name"> Name: </label><br />
+      <input type="text" [(ngModel)] ="name" name="name"/>
+    </div>
+    
+    <div>
+      <label for="age">Age: </label><br />
+      <input type="number" [(ngModel)] ="age" name="age"/>
+    </div>
+    <div>
+    <label for="email">Email: </label><br />
+      <input type="email" [(ngModel)] ="email" name="email"/>
+    </div>
+    
+    <div>      
+      <label for="street">Street: </label><br />
+      <input type="text" [(ngModel)]="address.street" name="street"/>
+      </div>
+    
+    <div>      
+      <label for="city">City: </label><br />
+      <input type="text" [(ngModel)]="address.city" name="city">
+    </div>
+
+    <div>      
+        <label for="state">State: </label><br />
+        <input type="text" [(ngModel)]="address.state" name="state">
+    </div>
+    
+
+    <h2>Address</h2>
+
+  </div>
+</form>
